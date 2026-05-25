@@ -11,7 +11,10 @@ for (let i =0; i < botoes.length; i++){
     }
 console.log(botoes);
 }
-const contadores = document.querySelectorAll("contador");
+
+
+// [PARTE 2 LIBERADA] - Definição dos Alvos
+const contadores = document.querySelectorAll(".contador");
 const tempoObjetivo1 = new Date("2026-12-28T23:59:59");
 const tempoObjetivo2 = new Date("2026-12-28T23:59:59");
 const tempoObjetivo3 = new Date("2026-12-28T23:59:59");
@@ -20,10 +23,14 @@ const tempoObjetivo4 = new Date("2026-12-28T23:59:59");
 const tempos = [
     tempoObjetivo1, tempoObjetivo2, tempoObjetivo3, tempoObjetivo4
 ];
+
+// [PARTE 3 LIBERADA] - Inicialização dos Contadores
 for (let i = 0; i < contadores.length; i++) {
     contadores[i].textContent = calculaTempo(tempos[i]);
 }
 contadores[0].textContent = calculaTempo(tempoObjetivo1);
+
+// [PARTE 4 LIBERADA] - Função de Cálculo Matemático
 function calculaTempo(tempoObjetivo1) {
     let tempoAtual = new Date();
     let tempoFinal = tempoObjetivo1 - tempoAtual;
